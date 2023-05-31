@@ -9,7 +9,8 @@ class CategoriesController extends Controller
 {
     public function index()
     {
-        return view("pages.categories.index");
+        $allCategories = CategoriesBooks::latest()->get();
+        return view("pages.categories.index",compect($allCategories));
     }
     public function create()
     {
