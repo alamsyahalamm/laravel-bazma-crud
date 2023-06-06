@@ -19,12 +19,12 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <form action="{{route("perpus.categories.store")}}" method="post" autocomplete="off">
+                            <form action="{{ url('perpus/categories/' . $data->id) }}" method="post" autocomplete="off">
                                 @csrf
-                                @method("patch")
+                                @method('PUT')
                                 <div class="mb-3">
                                     <label class="form-label required">Nama Kategori</label>
-                                    <input type="text" class="form-control" name="example-text-input"
+                                    <input type="text" class="form-control" name="name" value="{{ $data->name }}"
                                         placeholder="Input Nama Kategori">
                                 </div>
                                 <button class="btn btn-primary">Update</button>

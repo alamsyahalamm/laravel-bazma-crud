@@ -13,8 +13,7 @@ return new class extends Migration
     {
         Schema::create('categories_books', function (Blueprint $table) {
             $table->id();
-            $table->string("name_book");
-            $table->string("writer");
+            $table->string("name");
             $table->timestamps();
         });
     }

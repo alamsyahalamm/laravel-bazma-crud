@@ -1,6 +1,7 @@
 @section('pageTitle', 'Buat Kategori')
 @extends('app.app')
 @section('content')
+
     <div class="container-xl">
         <div class="row row-cards">
             <div class="row g-2 align-items-center">
@@ -19,14 +20,14 @@
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
-                            <form action="{{route("perpus.categories.store")}}" method="post" autocomplete="off">
+                            <form action="{{ route('perpus.categories.store') }}" method="post" autocomplete="off">
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label required">Nama Kategori</label>
-                                    <input type="text" class="form-control" name="example-text-input"
+                                    <input type="text" class="form-control" name="name"
                                         placeholder="Input Nama Kategori">
                                 </div>
-                                <button class="btn btn-primary">Create </button>
+                                <button type="submit" class="btn btn-primary">Create </button>
                             </form>
                         </div>
                     </div>
